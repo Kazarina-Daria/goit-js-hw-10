@@ -6,17 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
     <link rel="stylesheet" href="./css/styles.css" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
   </head>
   <body>
 
     <main>
       <div class="container">
       <a class="back-link" href="./index.html">Go back</a>
-        <h1 class="main-title">
-          snack
-        </h1>
       </div>
+
+<form class="form">
+  <label class="input">
+    Delay (ms)
+    <input type="number" name="delay" required />
+  </label>
+
+  <fieldset>
+    <legend>State</legend>
+    <label>
+      <input type="radio" name="state" value="fulfilled" required />
+      Fulfilled
+    </label>
+    <label>
+      <input type="radio" name="state" value="rejected" required />
+      Rejected
+    </label>
+  </fieldset>
+
+  <button type="submit" class="button">Create notification</button>
+</form>
+
+
     </main>
         <script type="module" src="/js/2-snackbar.js" ></script>
+      <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
   </body>
 </html>

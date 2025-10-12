@@ -28,21 +28,6 @@ button {
   cursor: pointer;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-}
-
-main {
-  flex-grow: 1;
-}
-main:has(.back-link) {
-  text-align: center;
-}
-
 .header {
   padding: 20px 0;
 }
@@ -130,7 +115,12 @@ main:has(.back-link) {
   opacity: 1;
   animation-play-state: running;
 }
-
+#picker-wrapper{
+display: flex;
+flex-direction: row;
+gap: 5px;
+margin-bottom: 5px;
+}
 
 .container {
   min-width: 320px;
@@ -140,7 +130,13 @@ main:has(.back-link) {
   margin-bottom: 20px;
 }
 
+.input{
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+}
 
-
-
-
+fieldset{
+  margin: 10px 0;
+  width: 200px;
+}

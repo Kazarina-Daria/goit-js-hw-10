@@ -31,11 +31,9 @@ flatpickr(input, {
    if ( selectedDate <= now){
     iziToast.show({
     message: 'Please choose a date in the future',
-       target: '#datetime-picker',
     backgroundColor: 'red',
          messageColor: 'white',
-         target :'#picker-wrapper',
-          position: 'topLeft'
+          position: 'topCenter',
 })
    }else{
     startBtn.disabled= false;
