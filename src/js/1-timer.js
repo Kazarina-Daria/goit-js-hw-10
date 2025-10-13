@@ -14,7 +14,7 @@ startBtn.disabled = true;
 let userSelectedDate = null;
 let timerId = null;
 
-flatpickr(input, {
+const calendar = flatpickr(input, {
   altInput: true,
   altFormat: 'F j, Y',
   dateFormat: 'Y-m-d',
@@ -37,6 +37,9 @@ flatpickr(input, {
 })
    }else{
     startBtn.disabled= false;
+  calendar.altInput.disabled = false;
+
+
     userSelectedDate =selectedDate;
    }
   },});
@@ -46,6 +49,10 @@ flatpickr(input, {
 
   function handlerclick(){
       startBtn.disabled = true;
+ calendar.altInput.disabled = true;
+
+
+
 
     timerId = setInterval(() => {
   const now = new Date;
@@ -53,6 +60,7 @@ flatpickr(input, {
 
   if(timeLeft <=0){
     clearInterval(timerId);
+     calendar.altInput.disabled = false;
     updateTime({days:0, hours:0, minutes:0, seconds:0});
     return;
   }
